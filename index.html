@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Student Management System with Local Storage</title>
+    <link rel="stylesheet" href="livre.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body style="background-color: rgb(178,239,241)">
+
+    <!-- A form for adding student details -->
+
+    <h1>Gestion des livres</h1>
+    <form id="form" style="display: none;">
+        <input type="hidden" name="id" id="id">
+        <label for="">Nom du livre</label>
+        <input type="text" placeholder="Donner le nom du livre" class="form-control" name="name" id="name" required>
+        <br>
+        <label for="">Auteur</label>
+        <input type="text" placeholder="Donner le nom d'auteur" class="form-control" name="auteur" id="auteur" required>
+        <br>
+        <label for="">Prix</label>
+        <input type="number" placeholder="Donner le prix" class="form-control" name="prix" id="prix" required>
+        <br>
+        <div class="form-action-buttons">
+            <button class="btn btn-sm btn-primary" type="button" onclick="save()">Save</button>
+            <button class="btn btn-sm btn-primary" type="button" onclick="clearData()">Reset</button>
+        </div>
+    </form>
+    <button class="btn btn-sm btn-primary" type="button" onclick="toggleForm()">Ajouter un livre</button>
+
+
+
+    <!-- A table for displaying a list of students -->
+    <table class="list" id="stdlist" class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom du livre</th>
+                <th>Auteur</th>
+                <th>Prix</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="table">
+
+        </tbody>
+    </table>
+
+    <!-- A script for adding functionality to the student management system -->
+    <script src="livre.js"></script>
+
+</body>
+
+</html>
